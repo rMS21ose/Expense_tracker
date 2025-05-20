@@ -1,0 +1,20 @@
+[
+    {
+        "amount": 200.0,
+        "category": "Food",
+        "date": "2025-05-20",
+        "description": "Preethika's birthday"
+    },
+    {
+        "amount": 1500.0,
+        "category": "Shopping",
+        "date": "2025-04-18",
+        "description": "Varshinee's Birthday"
+    },
+    {
+        "amount": 200.0,
+        "category": "Travel",
+        "date": "2025-04-20",
+        "description": "Rapido to college"
+    }
+]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+
+    <form method="POST">
+        <input type="number" step="0.01" name="amount" placeholder="Amount" required>
+        <input type="text" name="category" placeholder="Category" required>
+        <input type="date" name="date">
+        <input type="text" name="description" placeholder="Description" required>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <h2>All Expenses</h2>
+    <ul>
+        {% for e in expenses %}
+            <li>{{ e.date }} | {{ e.category }} | ₹{{ e.amount }} | {{ e.description }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Total by Category</h2>
+    <ul>
+        {% for cat, total in totals.items() %}
+            <li>{{ cat }}: ₹{{ total }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
